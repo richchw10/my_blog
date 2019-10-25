@@ -1,4 +1,168 @@
 ---
 label: Form
 hide_body: true
-fields: []
+fields:
+- name: form_title
+  type: text
+  config:
+    required: false
+  label: Form Title
+  default: Form Title
+- name: form_intro_
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: 'Form Intro '
+- name: form_disclaimer
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Form Disclaimer
+- name: form_blocks
+  type: blocks
+  label: Form blocks
+  template_types:
+  - form
+  config:
+    min: 
+    max: 
+- name: form_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Form Text
+- name: form_select
+  type: select
+  default: Dine In
+  config:
+    required: true
+    options:
+    - Dine In
+    - Take-out
+    - Delivery
+    - Reservation
+    - Anniversary
+    - Birthday
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Form Select
+- name: form_calendar
+  type: datetime
+  description: ''
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Form Calendar
+  default: now
+- name: form_field_group
+  type: field_group
+  config: {}
+  fields:
+  - name: form_toggle
+    type: boolean
+    label: Form Toggle
+    default: false
+  - name: form_tags
+    type: tag_list
+    default:
+    - Vegan
+    - Vegetarian
+    - Meat lovers
+    - Seafood Allergic
+    - No eggs
+    - Lactose Intolerance
+    - Gluten-free
+    label: Form tags
+  label: Form Field Group
+- name: contact_information
+  type: field_group
+  config: {}
+  fields:
+  - name: first_name
+    type: text
+    config:
+      required: true
+    label: First Name
+    description: Your first name
+  - name: last_name
+    type: text
+    config:
+      required: false
+    label: Last Name
+    description: Your last name
+  - name: phone_number
+    type: number
+    label: phone number
+    description: ''
+    default: ''
+    required: true
+    config:
+      min: '600000000'
+      max: '9999999999'
+      step: 
+      required: true
+  - name: email
+    type: text
+    config:
+      required: true
+    label: Email
+  label: Contact Information
+- name: files
+  type: field_group
+  config: {}
+  fields:
+  - name: client_photo
+    type: file
+    config:
+      maxSize: 250
+    label: Client Photo
+    description: Upload your photo here
+  - name: files
+    type: image_gallery
+    config: {}
+    label: Files
+    description: Upload your files here
+  - name: color_picker
+    type: color
+    label: color picker
+    config:
+      required: false
+      color_format: RGB
+    default: rgb(74, 144, 226)
+  - name: sort_list
+    type: list
+    config:
+      use_select: true
+      min: '3'
+      max: '6'
+      source:
+        type: simple
+      options:
+      - Beef
+      - Chicken
+      - Pork
+      - Fish
+      - Veggie
+      - Cheese
+      - Egg
+      - Rice
+      - Potato
+    label: sort list
+  label: Files
