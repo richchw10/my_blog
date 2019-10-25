@@ -1,0 +1,14 @@
+---
+layout: "wrapper"
+author: "Richard"
+---
+
+{% for post in site.posts %}
+  <li><a style="{% if page.url == post.url %} display:none; {% endif %}" href="{{ post.url }}">{{ post.url }}</a></li>
+{% endfor %}
+
+<h1>{{ page.food }}</h1>
+<h3>{{ page.author }}</h3>
+<hr>
+
+{{ content }}
