@@ -166,3 +166,5 @@ fields:
       - Potato
     label: sort list
   label: Files
+pages:
+- _posts/Test_form.md
