@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/jekyll/jekyll-sass-converter
+  revision: 9bbe9701214d996e86f3573c9042d89ce7fb107c
+  branch: master
+  specs:
+    jekyll-sass-converter (2.0.1)
+      sassc (> 2.0.1, < 3.0)
+
+GIT
   remote: https://github.com/pages-themes/hacker.git
   revision: e193e8e825d1db5b6c1761cb8026a0d6f0e29142
   branch: master
@@ -40,8 +48,6 @@ GEM
       terminal-table (~> 1.8)
     jekyll-feed (0.12.1)
       jekyll (>= 3.7, < 5.0)
-    jekyll-sass-converter (2.0.1)
-      sassc (> 2.0.1, < 3.0)
     jekyll-seo-tag (2.6.1)
       jekyll (>= 3.3, < 5.0)
     jekyll-watch (2.2.1)
@@ -84,6 +90,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.0)
   jekyll-feed (~> 0.12)
+  jekyll-sass-converter!
   jekyll-theme-hacker!
   minima (~> 2.5)
   tzinfo (~> 1.2)
