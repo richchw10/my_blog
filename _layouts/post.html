@@ -4,7 +4,7 @@ author: "Richard"
 ---
 
 {% for post in site.posts %}
-  <li><a style="{% if page.url == post.url %} display:none; {% endif %}" href="{{ post.url |  prepend: site.baseurl }}">{{ post.url }}</a></li>
+  <li><a style="{% if page.url == post.url %} display:none; {% endif %}" href="{{ post.url |  prepend: site.baseurl }}">{{ post.title }}</a></li>
 {% endfor %}
 
 <h1>{{ page.food }}</h1>
