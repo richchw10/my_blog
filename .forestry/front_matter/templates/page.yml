@@ -1,4 +1,11 @@
 ---
 label: page
 hide_body: false
-fields: []
+fields:
+- name: adsf
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: adsf
